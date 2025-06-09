@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const About: React.FC = () => {
   return (
@@ -12,13 +13,13 @@ const About: React.FC = () => {
                 ABOUT US
               </span>
             </div>
-            
+
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               Focused On Excellence In Every Project
             </h2>
-            
+
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              With over 25 years of experience in the construction industry, we've built our reputation on quality, reliability, and exceptional customer service. Our team of skilled professionals is dedicated to bringing your vision to life, whether it's a residential renovation, commercial construction, or specialized project.
+              With over 25 years of experience in the construction industry, we&apos;ve built our reputation on quality, reliability, and exceptional customer service. Our team of skilled professionals is dedicated to bringing your vision to life, whether it&apos;s a residential renovation, commercial construction, or specialized project.
             </p>
 
             {/* CEO Quote/Signature */}
@@ -32,7 +33,10 @@ const About: React.FC = () => {
             </div>
 
             {/* CTA Button */}
-            <a href="#booking" className="bg-amber-400 hover:bg-amber-500 text-white px-6 py-3 rounded-lg transition-colors font-medium inline-flex items-center">
+            <a
+              href="#booking"
+              className="bg-amber-400 hover:bg-amber-500 text-white px-6 py-3 rounded-lg transition-colors font-medium inline-flex items-center"
+            >
               Get Quote
               <span className="ml-2 bg-black text-white px-2 py-1 rounded text-sm">→</span>
             </a>
@@ -40,13 +44,13 @@ const About: React.FC = () => {
 
           {/* Image */}
           <div className="flex-1 lg:max-w-lg">
-            <div className="relative">
-              <img 
-                src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Construction project showcase" 
-                className="w-full h-auto rounded-lg shadow-lg object-cover"
+            <div className="relative w-full h-96">
+              <Image
+                src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Construction project showcase"
+                fill
+                className="object-cover rounded-lg shadow-lg"
               />
-              {/* Optional overlay decoration */}
               <div className="absolute -bottom-4 -right-4 w-full h-full bg-amber-400 rounded-lg -z-10 hidden md:block"></div>
             </div>
           </div>

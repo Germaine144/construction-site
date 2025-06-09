@@ -5,17 +5,17 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative w-full h-[90vh] overflow-hidden">
       {/* Background Video */}
-      <video 
-        className="w-full h-full object-cover" 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-      >
-        <source src="/construction.webm" type="video/webm" />
+     <video
+  className="w-full h-full object-cover"
+  autoPlay
+  loop
+  muted
+  playsInline
+>
+  <source src="/construction.webm" type="video/webm" />
+  Your browser does not support the video tag.
+</video>
 
-        Your browser does not support the video tag.
-      </video> 
       
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />

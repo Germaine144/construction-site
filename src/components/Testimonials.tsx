@@ -1,5 +1,6 @@
-"use client" ;
+"use client";
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
@@ -61,11 +62,14 @@ const Testimonials: React.FC = () => {
                 {testimonials[activeIndex].text}
               </p>
               <div className="flex items-center">
-                <img 
-                  src={testimonials[activeIndex].image} 
-                  alt={testimonials[activeIndex].name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
+                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                  <Image
+                    src={testimonials[activeIndex].image}
+                    alt={testimonials[activeIndex].name}
+                    fill
+                    className="object-cover rounded-full"
+                  />
+                </div>
                 <div className="ml-4">
                   <h4 className="font-bold text-gray-900">{testimonials[activeIndex].name}</h4>
                   <p className="text-amber-500">{testimonials[activeIndex].title}</p>
@@ -76,7 +80,7 @@ const Testimonials: React.FC = () => {
             {/* Testimonial Navigation */}
             <div className="flex justify-between items-center">
               <div>
-                <button 
+                <button
                   onClick={prevTestimonial}
                   className="w-10 h-10 rounded-full bg-gray-200 hover:bg-amber-400 hover:text-white flex items-center justify-center transition-colors"
                 >
@@ -88,7 +92,7 @@ const Testimonials: React.FC = () => {
                 <span className="text-gray-400"> / {testimonials.length}</span>
               </div>
               <div>
-                <button 
+                <button
                   onClick={nextTestimonial}
                   className="w-10 h-10 rounded-full bg-gray-200 hover:bg-amber-400 hover:text-white flex items-center justify-center transition-colors"
                 >
@@ -96,19 +100,23 @@ const Testimonials: React.FC = () => {
                 </button>
               </div>
             </div>
-            
-            <a href="#booking" className="bg-amber-400 hover:bg-amber-500 text-white px-6 py-3 rounded-lg transition-colors font-medium inline-flex items-center">
+
+            <a
+              href="#booking"
+              className="bg-amber-400 hover:bg-amber-500 text-white px-6 py-3 rounded-lg transition-colors font-medium inline-flex items-center"
+            >
               Get Quote
               <span className="ml-2 bg-black text-white px-2 py-1 rounded text-sm">→</span>
             </a>
           </div>
 
           {/* Right Column - Image */}
-          <div className="hidden lg:block">
-            <img
-              src="image/eng.png"
+          <div className="hidden lg:block relative w-full h-[450px]">
+            <Image
+              src="/image/eng.png"
               alt="Construction project showcase"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
+              fill
+              className="object-cover rounded-lg shadow-lg"
             />
           </div>
         </div>

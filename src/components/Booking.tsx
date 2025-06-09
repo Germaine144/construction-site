@@ -81,7 +81,7 @@ const Booking: React.FC = () => {
             Schedule Your Construction Service
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-            Tell us about your project and preferred time, and we'll arrange a consultation with one of our experts.
+            Tell us about your project and preferred time, and {"we'll arrange a consultation with one of our experts."}
           </p>
         </div>
 
