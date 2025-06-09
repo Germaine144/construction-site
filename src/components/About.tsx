@@ -44,7 +44,7 @@ const About: React.FC = () => {
 
           {/* Image */}
           <div className="flex-1 lg:max-w-lg">
-            <div className="relative w-full h-160 ">
+            <div className="relative w-[300px] h-[100px] md:w-[400px] md:h-[400px] sm:w-[400px] sm:h-[400px]">
               <Image
                 src="/image/p.jpg"
                 alt="Construction project showcase"
