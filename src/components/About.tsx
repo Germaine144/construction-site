@@ -44,12 +44,12 @@ const About: React.FC = () => {
 
           {/* Image */}
           <div className="flex-1 lg:max-w-lg">
-            <div className="relative w-full h-96">
+            <div className="relative w-full h-160 ">
               <Image
-                src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="/image/p.jpg"
                 alt="Construction project showcase"
                 fill
-                className="object-cover rounded-lg shadow-lg"
+                className="object-cover  rounded-full shadow-lg"
               />
               <div className="absolute -bottom-4 -right-4 w-full h-full bg-amber-400 rounded-lg -z-10 hidden md:block"></div>
             </div>
