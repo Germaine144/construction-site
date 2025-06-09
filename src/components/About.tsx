@@ -27,9 +27,7 @@ const About: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-1">
                 RUBAGUMYA Prince
               </h3>
-              <p className="text-amber-400 font-medium mb-6">
-                Company CEO
-              </p>
+              <p className="text-amber-400 font-medium mb-6">Company CEO</p>
             </div>
 
             {/* CTA Button */}
@@ -43,15 +41,16 @@ const About: React.FC = () => {
           </div>
 
           {/* Image */}
-          <div className="flex-1 lg:max-w-lg">
-            <div className="relative w-[300px] h-[100px] md:w-[400px] md:h-[400px] sm:w-[400px] sm:h-[400px]">
+          <div className="flex-1 flex justify-center">
+            <div className="relative w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]">
               <Image
                 src="/image/p.jpg"
                 alt="Construction project showcase"
                 fill
-                className="object-cover  rounded-full shadow-lg"
+                className="object-cover rounded-full shadow-lg"
               />
-              <div className="absolute -bottom-4 -right-4 w-full h-full bg-amber-400 rounded-lg -z-10 hidden md:block"></div>
+              {/* Decorative background circle */}
+              <div className="absolute -bottom-4 -right-4 w-full h-full bg-amber-400 rounded-full -z-10 hidden md:block"></div>
             </div>
           </div>
         </div>
